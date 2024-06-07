@@ -1,4 +1,4 @@
-# Simulating a Twitter (X) Database
+# Simulating a Twitter (X) Database using MySQL
 
 ## Introduction
 ---
@@ -138,5 +138,14 @@ delimiter ;
 - This code can be used to set up a database for a social media platform.
 - The stored procedures facilitate account creation and managing follow relationships.
 - The code includes basic settings that can be customized to meet specific requirements.
+
+## Example Execution
+---
+To create a new account and establish a follow relationship, you can use the stored procedures as follows:
+
+```sql
+CALL createAccount('username', 'email@example.com', MD5('password'), 'Bio goes here', 'Location', 'http://website.com');
+CALL user_follow('follower_username', 'followed_username');
+```
 
 
